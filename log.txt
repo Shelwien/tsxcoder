@@ -1,0 +1,62 @@
+0.087s: fpaq0mw c ..\book1 1
+0.086s: fpaq0mw d 1 2
+447681
+
+// EOF flag -> filesize
+0.078s: fpaq0mw c ..\book1 1
+0.082s: fpaq0mw d 1 2
+447151
+
+// carryless -> sh_v1m
+0.083s: fpaq0mw c ..\book1 1
+0.122s: fpaq0mw d 1 2
+447071
+
+// GetFreq -> rc_Bound
+0.084s: fpaq0mw c ..\book1 1
+0.091s: fpaq0mw d 1 2
+447071
+
+// clen calc
+0.100s: fpaq0mw c ..\book1 1
+0.098s: fpaq0mw d 1 2
+447071
+
+18.527s: fpaq0mw c ..\book1 1
+22.155s: fpaq0mw c ..\book1 1
+24.224s: fpaq0mw c ..\book1 1
+
+26.976s: fpaq0mw c ..\book1 1
+29.831s: fpaq0mw d 1 2
+447350
+
+27.481s: fpaq0mw c ..\book1 1
+29.319s: fpaq0mw d 1 2
+447352
+
+53.984s: fpaq0mw c ..\book1 1
+58.237s: fpaq0mw d 1 2
+447351
+
+// tsx.inc
+24.018s: fpaq0mw c ..\book1 1
+24.107s: fpaq0mw d 1 2
+447351
+
+// tsx1.inc
+23.453s: fpaq0mw c ..\book1 1
+56.484s: fpaq0mw d 1 2
+447351
+
+33.047s: fpaq0mw c ..\book1 1
+32.849s: fpaq0mw d 1 2
+447351
+
+61.733s: fpaq0mw c ..\book1 1
+18.712s: fpaq0mw d 1 2
+447351
+
+18.480s: fpaq0mw c ..\book1 1
+18.703s: fpaq0mw d 1 2
+447351
+
