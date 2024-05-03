@@ -6,6 +6,10 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <math.h>
+#ifndef _MSC_VER
+#include <unistd.h>
+#define _sleep(_x) usleep(_x)
+#endif
 
 #define assert(x)
 
@@ -69,7 +73,7 @@ int main(int argc, char** argv) {
     E.rc_Init(DECOMPRESS,in);
   }
 
-  for( i=0; i<f_len; i++ ) { 
+  for( i=0; i<f_len; i++ ) {
 
     for( d=0,low=0; d<256; d++ ) {
       do {
@@ -96,7 +100,7 @@ int main(int argc, char** argv) {
 
       } while(1);
 
-      freq[d]=unlog[r>>24]; 
+      freq[d]=unlog[r>>24];
 
       low += freq[d];
 

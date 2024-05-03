@@ -1,0 +1,47 @@
+diff -rup tsxcoder-main~/fpaq0mw.cpp tsxcoder-main/fpaq0mw.cpp
+--- tsxcoder-main~/fpaq0mw.cpp	2024-04-29 19:21:12.000000000 +0000
++++ tsxcoder-main/fpaq0mw.cpp	2024-05-04 00:30:45.000000000 +0000
+@@ -6,6 +6,10 @@
+ #include <stdlib.h>
+ #include <memory.h>
+ #include <math.h>
++#ifndef _MSC_VER
++#include <unistd.h>
++#define _sleep(_x) usleep(_x)
++#endif
+ 
+ #define assert(x)
+ 
+@@ -69,7 +73,7 @@ int main(int argc, char** argv) {
+     E.rc_Init(DECOMPRESS,in);
+   }
+ 
+-  for( i=0; i<f_len; i++ ) { 
++  for( i=0; i<f_len; i++ ) {
+ 
+     for( d=0,low=0; d<256; d++ ) {
+       do {
+@@ -96,7 +100,7 @@ int main(int argc, char** argv) {
+ 
+       } while(1);
+ 
+-      freq[d]=unlog[r>>24]; 
++      freq[d]=unlog[r>>24];
+ 
+       low += freq[d];
+ 
+diff -rup tsxcoder-main~/sh_mixer.inc tsxcoder-main/sh_mixer.inc
+--- tsxcoder-main~/sh_mixer.inc	2024-04-29 19:21:12.000000000 +0000
++++ tsxcoder-main/sh_mixer.inc	2024-05-04 00:32:54.000000000 +0000
+@@ -1,4 +1,11 @@
+ 
++#ifndef __min
++#define __min(a,b) (((a) < (b)) ? (a) : (b))
++#endif
++#ifndef __max
++#define __max(a,b) (((a) > (b)) ? (a) : (b))
++#endif
++
+ struct iMixer {
+   word w;
+ 
